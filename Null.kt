@@ -1,6 +1,5 @@
 fun main() {
     var il: Int = 0
-    il = null
 
     var i2: Int? = 0
     i2 = null
