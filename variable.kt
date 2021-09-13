@@ -30,4 +30,15 @@ fun main() {
 
     val string: String = "hello world"
     println(string[4])
+
+    var number: Int = 0
+    val decimal: Int = 256
+    val whiteColor: Int = 0xFFFFFF
+    val binary: Int = 0b0000
+    val pi: Double = 3.1415
+    val variableNumber: Long = 10_000_000_000
+
+    var count: Any = 1
+    count = "counter"
+    count = 1.567
 }
