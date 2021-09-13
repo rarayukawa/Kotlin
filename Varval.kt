@@ -10,7 +10,6 @@ fun main() {
     println(versionVar)
 
     val counterVal: Int = 0
-    counterVal++
-    val versionVal: Double = 1.0
-    versionVal = 2.0
+
+    val age: Int = 31
 }
