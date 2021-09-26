@@ -1,9 +1,9 @@
-class User(age: Int)
+class User()
 class UserVal(val age: Int)
 class UserVar(var age: Int)
 
 fun main() {
-    val user = User(age = 31)
+    val user = User()
 
     val userVal = UserVal(age = 31)
     println(userVal.age)

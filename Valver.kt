@@ -6,6 +6,6 @@ class Valver {
     val set = setOf(1, 2)
     val map = mapOf("a" to 10)
 
-    fun echo(messoge: String) = println("message: $message")
+    fun echo(message: String) = println("message: $message")
     fun joinString(message: String) = "message: $message"
 }
