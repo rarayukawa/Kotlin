@@ -32,14 +32,8 @@ fun main() {
     5 >= 5
     6 <= 5
 
-    val user1 = User(id = 1)
-    val user2 = User(id = 1)
-    user1 == user2
-    user1 === user2
 
     val input: String? = null
     val text = input ?: "default"
     println(text)
 }
-
-data class User(val id: Int)
