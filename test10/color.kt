@@ -1,24 +1,14 @@
 package test10
 
+sealed class Color {
+    object Red: Color()
+    object Green: Color()
+    object Blue: Color()
+}
+
 fun main() {
-    data class Color(   //openできないので継承できない
-        val name: String,
-        val code: String,
-    )
-
-    val dataA = Color(
-        name = "red",
-        code = "FF0000"
-    )
-
-    val dataB = Color(
-        name = "red",
-        code = "FF0000"
-    )
-
-    val dataC = dataA
-
-    println(dataA == dataB)
-    println(dataA === dataB)
-    println(dataA === dataC)
+    val red = Color.Red
+    if (red == Color.Red) {
+        println(red)
+    }
 }
