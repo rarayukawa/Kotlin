@@ -1,12 +1,18 @@
 package test10
 
-abstract class Language {
-    abstract val version: Double
-
-    abstract fun packageName(): String
+open class Language {
+    open fun hello() {
+        println("Hello Language")
+    }
 }
 
 class Kotlin : Language() {
-    override val version = 1.4
-    override fun packageName() = "example.kotlin"
+    override fun hello() {
+        println("Hello Kotlin")
+    }
+}
+
+fun main() {
+    val kotlin = Kotlin()
+    kotlin.hello()
 }
