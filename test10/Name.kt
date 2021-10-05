@@ -16,12 +16,23 @@ package test10
 data class Name(var name: String)
 
 fun main() {
-    val yukawa = Color(name = "rara")
-
-    val name = yukawa.let {
-        it.name = "kitahara"
-        it              //ラムダの実行結果として最後のitが返却される
+    val yukawa = Name(name = "rara")
+    yukawa.let {
+        it.name = "miyu"
     }
-        .name.capitalize()
-    println(name)
+    yukawa.apply {
+        this.name = "miyu"
+    }
+    yukawa.let {
+        args ->
+        args.name = "taki"
+    }
+//    val yukawa = Color(name = "rara")
+//
+//    val name = yukawa.let {
+//        it.name = "kitahara"
+//        it              //ラムダの実行結果として最後のitが返却される
+//    }
+//        .name.capitalize()
+//    println(name)
 }
