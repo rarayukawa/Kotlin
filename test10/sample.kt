@@ -1,9 +1,12 @@
 package test10
 
 fun main() {
-    try {
-        val i = "a".toInt()
-    } catch (e: Exception) {
-        println(e.message)
+    val x:Any = 42
+    if ( x is Int) {
+        println(x.toString(radix = 2))
+    }
+    if (x is Int) {
+        val s = x as Int
+        println(x.toString(radix = 2))
     }
 }
