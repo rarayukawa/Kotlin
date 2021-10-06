@@ -17,10 +17,7 @@ data class PairContravariant<in A, in B>(
     private val second: B
 )
 
-open class Language {}
-
-class Kotlin : Language()
 
 fun main() {
-    
+
 }
