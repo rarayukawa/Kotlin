@@ -1,16 +1,19 @@
 package scopeFunction
 
 fun main() {
-    val apple: String = run {
-        "delicious"
+    val point = 10
+    val result = point.run {
+        this * this   //thisで参照可
     }
+    println(result)     //100
 
-    val fruit1 = Fruit(createdYear = 2020, name = "apple", color = "red")
-    val fruit2 = fruit1.run {        //この場合は戻り値がないのでfruit2はUnit型になる
-        this.createdYear = 2021    //thisは省略可能
-        name = "banana"
-        color = "yellow"
+    val nullSample = null
+    //?.でnullじゃなければ処理を実行
+    nullSample?.run {
+        println("nullじゃないよ")     //(何も出力されない)
     }
-
-
+    //?:でnullなら処理を実行
+    nullSample?:run {
+        println("nullだよ")    //nullだよ
+    }
 }

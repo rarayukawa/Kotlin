@@ -1,16 +1,6 @@
 package scopeFunction
 
 fun main() {
-    val book = Book("リーダブルコード")
-    book.author?.let {     //nullチェック
-        println("筆者:$it")  //ラムダ式の中はnullでないことがわかっているのでレシーバをnull非許容型として扱える
-    }?:println("筆者は未設定です")
-
-    val s : String? = null
-    s?.let {                //セーフコールの設定も可
-        println(s)
-    }
-
     val testList = mutableListOf<String?>("Baseball", "Soccer", "Golf")
     testList.let {
         for(item in it)
@@ -29,4 +19,10 @@ fun main() {
         this.uppercase()
     }
     println(cake)   //STRAWBERRY CAKE   戻り値はラムダ式の結果
+
+    val nullSample = 12
+    //セーフコール演算子をつけることでnullでなければ変数に操作
+    nullSample?.let {
+        it * 2
+    }                   //24
 }
